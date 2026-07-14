@@ -1,0 +1,164 @@
+/* ResultCard.css */
+
+.result-card-view {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Side-by-Side Dual Visual Verification Telemetry Panel */
+.segmentation-telemetry-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.telemetry-box h3 {
+  font-size: 0.95rem;
+  color: #0A4D68;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.img-frame {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  border: 1px solid #d8e4ea;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Optimized dark backing element for binary segmentation display */
+.binary-mask-bg {
+  background: #000000;
+  border-color: #05BFDB;
+}
+
+.mask-fallback-error {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  color: #dc3545;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Morphological Extracted Metric Items */
+.result-card-view h2 {
+  text-align: center;
+  color: #0A4D68;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.feature-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.feature-box h4 {
+  margin: 0 0 6px 0;
+  color: #088395;
+  font-size: 0.9rem;
+}
+
+.feature-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0A4D68;
+}
+
+.feature-box .unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* Calculated Weight Result View Box */
+.weight-box-hero {
+  background: linear-gradient(135deg, #0A4D68, #088395);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(10, 77, 104, 0.15);
+}
+
+.weight-box-hero h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.weight-value-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.weight-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.weight-unit {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Component Entry Animations */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smartphone Adjustments and Flex Collapses */
+@media (max-width: 968px) {
+  .segmentation-telemetry-panel {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .img-frame {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .weight-number {
+    font-size: 2.5rem;
+  }
+}

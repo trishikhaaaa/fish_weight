@@ -1,0 +1,33 @@
+.navbar {
+  background: linear-gradient(135deg, #0A4D68, #088395);
+  color: white;
+  text-align: center;
+  padding: 22px;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .navbar h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
