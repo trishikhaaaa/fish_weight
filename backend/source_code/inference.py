@@ -91,7 +91,7 @@ if __name__ == "__main__":
     predictor = FishWeightPredictor()
     
     # 2. Run prediction on a new image
-    test_image = r"C:\FISHES\FISH06\TOP_VIEW\frame_02948.jpg"
+    test_image = r"C:\FISHES\FISH06\TOP_VIEW\frame_03365.jpg"
     
     try:
         results = predictor.predict(test_image)
